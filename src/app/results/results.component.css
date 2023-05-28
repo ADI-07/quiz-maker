@@ -1,0 +1,23 @@
+.results-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.warning-result{
+    background-color: red;
+    color: white;
+    padding: 0.7em;
+}
+
+.average-result{
+    background-color: yellow;
+    color: black;
+    padding: 0.7em;
+}
+
+.good-result{
+    background-color: green;
+    color: white;
+    padding: 0.7em;
+}

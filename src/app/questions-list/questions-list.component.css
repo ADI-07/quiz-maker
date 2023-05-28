@@ -1,0 +1,52 @@
+button {
+    border-radius: 5px;
+}
+
+.selected-button{
+    background-color: green;
+    border: 1px solid green;
+    color: white;
+}
+
+.option-button{
+    margin-right: 20px;
+    border: 1px solid gray;
+}
+
+.options{
+    background: white;
+    border-radius: 5px;
+    padding: 0.7em;
+    border: none;
+    outline: none;
+    text-align: left;
+    margin-right: 20px;
+    border: 1px solid gray;
+    font-size: 0.8em;
+}
+
+.correct-option{
+    background: green;
+    border-radius: 5px;
+    padding: 0.7em;
+    border: none;
+    outline: none;
+    text-align: left;
+    margin-right: 20px;
+    border: 1px solid green;
+    color: white;
+    font-size: 0.8em;
+}
+
+.wrong-option{
+    background: red;
+    border-radius: 5px;
+    padding: 0.7em;
+    border: none;
+    outline: none;
+    text-align: left;
+    margin-right: 20px;
+    border: 1px solid red;
+    color: white;
+    font-size: 0.8em;
+}
