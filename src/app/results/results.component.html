@@ -1,12 +1,13 @@
 <div class="results-body">
-    <div class="sub-container" >
+    <div class="sub-container">
         <h2>Results</h2>
     </div>
     <div class="sub-container">
         <app-questions-list results="true"></app-questions-list>
     </div>
     <div class="sub-container">
-        <p *ngIf="result.total>0; else showMessage" [ngClass]="applyStyleClass(result.correct)">You scored {{result.correct}} out of {{result.total}}</p>
+        <p *ngIf="result.total>0; else showMessage" [ngClass]="applyStyleClass(result.correct)">You scored
+            {{result.correct}} out of {{result.total}}</p>
         <ng-template #showMessage>
             <p *ngIf="result.total<=0">No results to display</p>
         </ng-template>

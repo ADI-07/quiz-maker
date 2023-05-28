@@ -8,6 +8,8 @@ import { ResultsComponent } from './results/results.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { QuestionsListComponent } from './questions-list/questions-list.component';
+import { RandomizePipe } from './shared/pipes/randomize.pipe';
+import { HtmlToTextPipe } from './shared/pipes/html-to-text.pipe';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,7 @@ import { QuestionsListComponent } from './questions-list/questions-list.componen
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [RandomizePipe, HtmlToTextPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

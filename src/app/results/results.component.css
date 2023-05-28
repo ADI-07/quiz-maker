@@ -5,14 +5,14 @@
 }
 
 .warning-result{
-    background-color: red;
+    background-color: #EE4B2B;
     color: white;
     padding: 0.7em;
 }
 
 .average-result{
-    background-color: yellow;
-    color: black;
+    background-color: #FFBF00;
+    color: white;
     padding: 0.7em;
 }
 

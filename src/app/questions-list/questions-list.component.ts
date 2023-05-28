@@ -3,7 +3,7 @@ import { QuizQuestions } from '../shared/quiz-questions.model';
 import { AppService } from '../app.service';
 import { FormGroup, FormControl, FormBuilder, Validators, FormArray, AbstractControl } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Observable, Subscription, takeLast } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-questions-list',

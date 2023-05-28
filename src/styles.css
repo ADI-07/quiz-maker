@@ -39,8 +39,8 @@ button{
     padding: 0.7em;
     border: none;
     outline: none;
-    background: gray;
-    color: white;
+    background: #D3D3D3;
+    color: black;
 }
 
 button:hover{

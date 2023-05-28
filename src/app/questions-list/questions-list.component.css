@@ -3,8 +3,8 @@ button {
 }
 
 .selected-button{
-    background-color: green;
-    border: 1px solid green;
+    background-color: #00A36C;
+    border: 1px solid #00A36C !important;
     color: white;
 }
 
@@ -26,27 +26,27 @@ button {
 }
 
 .correct-option{
-    background: green;
+    background: #00A36C;
     border-radius: 5px;
     padding: 0.7em;
     border: none;
     outline: none;
     text-align: left;
     margin-right: 20px;
-    border: 1px solid green;
+    border: 1px solid #00A36C;
     color: white;
     font-size: 0.8em;
 }
 
 .wrong-option{
-    background: red;
+    background: #EE4B2B;
     border-radius: 5px;
     padding: 0.7em;
     border: none;
     outline: none;
     text-align: left;
     margin-right: 20px;
-    border: 1px solid red;
+    border: 1px solid #EE4B2B;
     color: white;
     font-size: 0.8em;
 }

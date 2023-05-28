@@ -5,19 +5,19 @@
     <div class="sub-container">
         <form [formGroup]="quizOptions" (ngSubmit)="onCreate()" style="width: 50%;" *ngIf="trivias.length>0">
             <select type="dropdown" formControlName="trivia" #categorySelect title="categorySelect">
-                <option *ngFor="let trivia of trivias" [value]="trivia.id">{{trivia.name}}</option>
+                <option *ngFor="let trivia of trivias" [value]="trivia.id" [disabled]="trivia.id==100001">{{trivia.name}}</option>
             </select>
             <select type="dropdown" formControlName="difficulty" #difficultySelect title="difficultySelect">
-                <option *ngFor="let difficulty of difficulties">{{difficulty}}</option>
+                <option *ngFor="let difficulty of difficulties" [value]="difficulty" [disabled]="difficulty=='Select difficulty'">{{difficulty}}</option>
             </select>
-            <button type="submit" class="button-primary">Create</button>
+            <button type="submit" class="button-primary" [disabled]="difficultySelect.value=='Select difficulty' && categorySelect.value=='100001'">Create</button>
         </form>
         <p *ngIf="trivias.length<=0"> Loading quiz...</p>
     </div>
     <div class="sub-container">
         <app-questions-list *ngIf="flag; else showLoading"></app-questions-list>
         <ng-template #showLoading>
-            <p *ngIf="flag == true && questions.length<=0">Loading questions ...</p>
+            <p *ngIf="flag == false && questions.length<=0">Loading questions ...</p>
         </ng-template>
     </div>
 </div>
