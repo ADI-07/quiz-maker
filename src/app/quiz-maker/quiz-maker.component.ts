@@ -4,7 +4,7 @@ import { Trivia, TriviaCategory } from '../shared/trivia.model';
 import { FormGroup, FormControl } from '@angular/forms';
 import { QuizOptions } from '../shared/quiz-options.model';
 import { QuizQuestions, QuizQuestionsResponse } from '../shared/quiz-questions.model';
-import { map, BehaviorSubject, Observable, Subscription } from 'rxjs';
+import { map, Observable, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-quiz-maker',
@@ -39,9 +39,10 @@ export class QuizMakerComponent {
   }
 
   onCreate(): void {
+    this.appService.unsubsribeAllSubscriptions(this.subscriptions);
+    this.subscriptions = [];
     this.flag = true;
     this.questions = []
-    this.appService.questionsSubject.next([])
     let questions$: Observable<QuizQuestions[]> = this.appService.getQuestions(JSON.parse(JSON.stringify(this.quizOptions.value)))
       .pipe(
         map((data: QuizQuestionsResponse) => {
